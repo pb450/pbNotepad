@@ -1,5 +1,5 @@
 # pbNotepad
-This script provides simple system for notes that can be handled as item in ox_inventory. Content of notes is saved to database. Notes after certain amount of time can be automatically cleaned from database.
+This script provides simple system for notes that can be handled as item in ox_inventory. Content of notes is saved to items metadata.
 See how this script works [right here](https://youtu.be/Rnkqqpwim8Q)
 ## Instalation and dependencies
 In order to use this script you have to install [ox_inventory](https://github.com/overextended/ox_inventory) and [ox_lib](https://github.com/overextended/ox_lib)
