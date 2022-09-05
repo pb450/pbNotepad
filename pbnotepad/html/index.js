@@ -3,8 +3,6 @@ window.onload = function() {
 }
 
 window.addEventListener('message', (event) => {
-
-    console.log(event.data.action);
     if (event.data.action === 'open') {
         ActiveReading(event.data.text);
     }

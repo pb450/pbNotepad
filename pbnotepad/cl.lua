@@ -2,7 +2,6 @@ RegisterNUICallback('action', function(data, cb)
     if data.action == 'createNote' then
         if data.content ~= '' then
             local txt = data.content;
-
             TriggerServerEvent("pbnotepad:giveNote", txt)
         end
     end
@@ -15,12 +14,9 @@ RegisterNUICallback('action', function(data, cb)
 end)
 
 exports('read', function(data,slot)
-    local id = slot.metadata.id
-
-    lib.callback('pbnotepad:getNoteContent', false, function(ctx)
-        SendNUIMessage({action = 'open', text = ctx})
-        SetNuiFocus(true, true)
-    end, id)
+    local ctx = slot.metadata.content
+    SendNUIMessage({action = 'open', text = ctx})
+    SetNuiFocus(true, true)
 end)
 
 exports('edit', function(data, slot)
